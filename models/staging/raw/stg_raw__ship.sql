@@ -9,10 +9,10 @@ source as (
 renamed as (
 
     select
-        orders_id,
-        shipping_fee,
-        log_cost,
-        ship_cost
+      orders_id,
+      shipping_fee,
+      logcost AS log_cost,
+      CAST(ship_cost AS INT64) AS ship_cost 
 
     from source
 
